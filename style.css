@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Sofia+Sans&family=Unbounded&family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(104, 173, 234);
+  color: white;
+  height: 72px;
+  font-size: 27px;
+  font-family: 'Sofia Sans' sans-serif;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  border-radius: 30px;
+  gap: 80px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: 'Sofia Sans' sans-serif;
+  position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.box:hover{
+    background-color: rgba(209, 202, 215, 0.577);
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+}
+
+.imgBox img{
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+h1{
+    font-size: 55px
+}
+
+#reset{
+    padding: 8px 15px;
+    background-color: #61e491;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.info{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 860px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .gameInfo h1{
+        font-size: 2.2rem;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+.cen{
+    text-align: center;
+}
